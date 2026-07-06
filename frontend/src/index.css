@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* ---- Color tokens ---- */
+  --color-ink: #1C1C1A;
+  --color-ink-soft: #5A5650;
+
+  --color-sand: #FBF7F0;
+  --color-sand-deep: #F1EADC;
+  --color-paper: #FFFFFF;
+
+  --color-teal: #0F5C4D;
+  --color-teal-deep: #0A4339;
+  --color-teal-soft: #E3EEEA;
+
+  --color-coral: #E8623D;
+  --color-coral-soft: #FBE6DE;
+
+  --color-sage: #7FA88F;
+  --color-sage-soft: #EAF2EC;
+
+  --color-gold: #D8A53D;
+  --color-gold-soft: #FAF0DC;
+
+  --color-line: #E6DFD0;
+
+  /* ---- Type tokens ---- */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* ---- Radius ---- */
+  --radius-card: 1.25rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-sand);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dark body,
+html.dark {
+  background-color: #15201B;
+}
+
+html.dark {
+  --color-ink: #F1EFE9;
+  --color-ink-soft: #B8B2A4;
+  --color-sand: #15201B;
+  --color-sand-deep: #1D2B24;
+  --color-paper: #1A2620;
+  --color-teal: #4FBE9F;
+  --color-teal-deep: #3A9C82;
+  --color-teal-soft: #1E332B;
+  --color-coral: #F08260;
+  --color-coral-soft: #3A241D;
+  --color-sage: #9BC2AC;
+  --color-sage-soft: #1F2E26;
+  --color-gold: #E8C173;
+  --color-gold-soft: #332919;
+  --color-line: #2A3A32;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.font-mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Focus visibility for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar - subtle */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-soft);
+}
+
+/* Signature: hand-drawn-feel progress ring base */
+.progress-ring-track {
+  stroke: var(--color-sand-deep);
+  fill: none;
+}
+.progress-ring-fill {
+  fill: none;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
