@@ -166,7 +166,7 @@ function SidebarContent({ navItems, user, isAdmin, onLogout }) {
                         to={to}
                         end={to === '/admin'}
                         className={({ isActive }) =>
-                            `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
+                            `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 hover:translate-x-1 ${
                                 isActive
                                     ? 'bg-(--color-teal-soft) text-(--color-teal-deep)'
                                     : 'text-(--color-ink-soft) hover:bg-(--color-sand-deep) hover:text-(--color-ink)'
