@@ -110,7 +110,10 @@ export default function Landing() {
                 </h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                     {FEATURES.map(({ icon: Icon, title, description }) => (
-                        <div key={title} className="bg-(--color-paper) border border-(--color-line) rounded-2xl p-6">
+                        <div
+                            key={title}
+                            className="bg-(--color-paper) border border-(--color-line) rounded-2xl p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
+                 >
                             <div className="h-10 w-10 rounded-full bg-(--color-teal-soft) flex items-center justify-center mb-4">
                                 <Icon size={18} className="text-(--color-teal-deep)" />
                             </div>
