@@ -156,7 +156,10 @@ export default function Dashboard() {
                     ) : (
                         <ul className="divide-y divide-(--color-line)">
                             {recentTransactions.map((tx) => (
-                                <li key={`${tx.type}-${tx.id}`} className="py-3 flex items-center gap-3">
+                                <li
+                                    key={`${tx.type}-${tx.id}`}
+                                    className="py-3 flex items-center gap-3 rounded-lg transition-colors duration-200 hover:bg-(--color-sand)"
+                        >
                                     <div
                                         className={`h-8 w-8 rounded-full flex items-center justify-center shrink-0 ${
                                             tx.type === 'income' ? 'bg-(--color-sage-soft) text-(--color-teal-deep)' : 'bg-(--color-coral-soft) text-(--color-coral)'
