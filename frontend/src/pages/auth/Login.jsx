@@ -108,7 +108,7 @@ export default function Login() {
                             </GoogleOAuthProvider>
                         ) : (
                             <div className="text-xs text-(--color-ink-soft)">
-                                Google sign-in is unavailable. Missing VITE_GOOGLE_CLIENT_ID.
+                                Google sign-in is currently unavailable. Please use your email and password to continue.
                             </div>
                         )}
                     </div>
