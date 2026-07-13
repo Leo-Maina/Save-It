@@ -87,9 +87,14 @@ export default function Register() {
                         </a>
                     </div>
 
-                    <Button onClick={() => navigate('/login')} className="w-full">
+                    <Button
+                        onClick={() => navigate('/login')}
+                        className="w-full"
+                        icon={UserPlus}
+                    >
                         Go to login
                     </Button>
+
                 </div>
             </div>
         );
